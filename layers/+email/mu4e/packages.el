@@ -166,7 +166,7 @@ mu4e-use-maildirs-extension-load to be evaluated after mu4e has been loaded."
     :init (with-eval-after-load 'mu4e (mu4e-maildirs-extension-load))))
 
 (defun mu4e/pre-init-org ()
-  (if mu4e-org-link-support
+  (if (and (boundp 'mu4e-mu-version) mu4e-org-link-support)
       (with-eval-after-load 'org
         ;; This is a dirty hack due to mu(4e) 1.8.2 renaming mu4e-meta to
         ;; mu4e-config.  See also
