@@ -356,6 +356,7 @@
     (spacemacs/register-repl 'eat 'eat)
     :config
     (setq eat-shell shell-default-term-shell)
+    (eat-compile-terminfo)
     (add-hook 'eat-mode-hook 'spacemacs/disable-hl-line-mode)))
 
 (defun shell/init-vterm ()
